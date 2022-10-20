@@ -27,6 +27,8 @@ const DefaultRoute = "/home"
 
 const Home = lazy(() => import("../../views/Home"))
 const About = lazy(() => import("../../views/About"))
+const Help = lazy(() => import("../../views/Help"))
+const Dimension = lazy(() => import("../../views/Dimension"))
 const SecondPage = lazy(() => import("../../views/SecondPage"))
 const Login = lazy(() => import("../../views/Login"))
 const Register = lazy(() => import("../../views/Register"))
@@ -47,6 +49,18 @@ const Routes = [
   {
     path: "/second-page",
     element: <SecondPage />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "/help",
+    element: <Help />
+  },
+  {
+    path: "/dimension",
+    element: <Dimension />
   },
   {
     path: "/login",
@@ -75,10 +89,6 @@ const Routes = [
     meta: {
       layout: "blank"
     }
-  },
-  {
-    path: "/about",
-    element: <About />
   }
 ]
 

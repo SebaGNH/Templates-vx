@@ -1,56 +1,88 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardLink
-} from "reactstrap"
+// ** React Imports
+import { Fragment } from 'react'
+
+// ** Reactstrap Imports
+import { Card, CardImg, CardTitle, CardBody, CardImgOverlay, CardText, Row, Col } from 'reactstrap'
+
+// ** Images
+import img1 from '@src/assets/images/slider/06.jpg'
+import img2 from '@src/assets/images/slider/09.jpg'
+import img3 from '@src/assets/images/slider/10.jpg'
+import img4 from '@src/assets/images/slider/08.jpg'
 
 const About = () => {
   return (
-    <div>
-      <Card>
-        <CardHeader>
-          <CardTitle>About 🚀</CardTitle>
-        </CardHeader>
-        <CardBody>
-          <CardText>All the best for your new project.</CardText>
-          <CardText>
-            Please make sure to read our{" "}
-            <CardLink
-              href="https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/documentation/"
-              target="_blank"
-            >
-              Template Documentation
-            </CardLink>{" "}
-            to understand where to go from here and how to use our template.
-          </CardText>
-        </CardBody>
-      </Card>
+    <Fragment>
+      <h5 className='mt-3 mb-2'>Images</h5>
+      <Row>
+        <Col xl='4' md='6'>
+          <Card className='mb-3'>
+            <CardImg top src={img1} alt='card-top' />
+            <CardBody>
+              <CardTitle tag='h4'>Card title</CardTitle>
+              <CardText>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+              </CardText>
+              <CardText>
+                <small className='text-muted'>Last updated 3 mins ago</small>
+              </CardText>
+            </CardBody>
+          </Card>
+        </Col>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Want to integrate JWT? 🔒</CardTitle>
-        </CardHeader>
-        <CardBody>
-          <CardText>
-            We carefully crafted JWT flow so you can implement JWT with ease and
-            with minimum efforts.
-          </CardText>
-          <CardText>
-            Please read our{" "}
-            <CardLink
-              href="https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/documentation/docs/development/auth"
-              target="_blank"
-            >
-              JWT Documentation
-            </CardLink>{" "}
-            to get more out of JWT authentication.
-          </CardText>
-        </CardBody>
-      </Card>
-    </div>
+        <Col xl='4' md='6'>
+          <Card className='mb-3'>
+            <CardBody>
+              <CardTitle tag='h4'>Card title</CardTitle>
+              <CardText>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+              </CardText>
+              <CardText>
+                <small className='text-muted'>Last updated 3 mins ago</small>
+              </CardText>
+            </CardBody>
+            <CardImg top src={img2} alt='card-bottom' />
+          </Card>
+        </Col>
+        <Col xl='4' md='6'>
+          <Card className='text-white border-0'>
+            <CardImg top src={img3} alt='card-overlay' />
+            <CardImgOverlay className='bg-overlay'>
+              <CardTitle className='text-white' tag='h4'>
+                Card title
+              </CardTitle>
+              <CardText>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+              </CardText>
+              <CardText>
+                <small className='text-muted'>Last updated 3 mins ago</small>
+              </CardText>
+            </CardImgOverlay>
+          </Card>
+        </Col>
+        <Col xl='4' md='6'>
+          <Card className='text-white border-0'>
+            <CardImg top src={img4} alt='card-overlay' />
+            <CardImgOverlay className='bg-overlay'>
+              <CardTitle className='text-white' tag='h4'>
+                Card title
+              </CardTitle>
+              <CardText>
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                is a little bit longer.
+              </CardText>
+              <CardText>
+                <small className='text-muted'>Last updated 3 mins ago</small>
+              </CardText>
+            </CardImgOverlay>
+          </Card>
+        </Col>
+
+      </Row>
+    </Fragment>
   )
 }
 
