@@ -4,6 +4,7 @@ import Avatar from '@components/avatar'
 // ** Third Party Components
 import axios from 'axios'
 import { MoreVertical, Edit, FileText, Archive, Trash } from 'react-feather'
+//import datatables from './datatables';
 
 // ** Reactstrap Imports
 import { Badge, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
@@ -25,6 +26,9 @@ export let data
 axios.get('/api/datatables/initial-data').then(response => {
   data = response.data
 })
+/* axios.get('/datatables/initial-data').then(response => {
+  data = response.data
+}) */
 
 // ** Table Zero Config Column
 export const basicColumns = [
