@@ -4,6 +4,7 @@ import { Fragment, useState, forwardRef } from 'react'
 // ** Table Data & Columns
 import { data, columns } from '../data/data'
 
+
 // ** Add New Modal Component
 import AddNewModal from './AddNewModal'
 
@@ -55,7 +56,7 @@ const Dimension = () => {
       nextLabel=''
       forcePage={currentPage}
       onPageChange={page => handlePagination(page)}
-      pageCount={searchValue.length ? Math.ceil(filteredData.length / 7) : Math.ceil(data.length / 7) || 1}
+      //pageCount={searchValue.length ? Math.ceil(filteredData.length / 7) : Math.ceil(data.length / 7) || 1}
       breakLabel='...'
       pageRangeDisplayed={2}
       marginPagesDisplayed={2}
@@ -97,6 +98,7 @@ const Dimension = () => {
             paginationComponent={CustomPagination}
             paginationDefaultPage={currentPage + 1}
             selectableRowsComponent={BootstrapCheckbox}
+            data={data}
           />
         </div>
       </Card>
