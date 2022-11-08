@@ -1,4 +1,4 @@
-import { Mail, Home, Codesandbox, HelpCircle, Anchor} from "react-feather"
+import { Mail, Home, Codesandbox, HelpCircle, Anchor, CheckSquare} from "react-feather"
 
 export default [
   {
@@ -30,5 +30,11 @@ export default [
     title: "Dimension",
     icon: <Anchor size={20} />,
     navLink: "/dimension"
+  },
+  {
+    id: "V5_modal_test",
+    title: "V5_modal_test",
+    icon: <CheckSquare size={20} />,
+    navLink: "/V5_modal_test"
   }
 ]

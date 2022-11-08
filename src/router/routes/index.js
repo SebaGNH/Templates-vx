@@ -34,6 +34,7 @@ const Login = lazy(() => import("../../views/Login"))
 const Register = lazy(() => import("../../views/Register"))
 const ForgotPassword = lazy(() => import("../../views/ForgotPassword"))
 const Error = lazy(() => import("../../views/Error"))
+const V5_modal_test = lazy(() => import("../../Examples/V5_modal_test"))
 
 // ** Merge Routes
 const Routes = [
@@ -89,6 +90,10 @@ const Routes = [
     meta: {
       layout: "blank"
     }
+  },
+  {
+    path: "/V5_modal_test",
+    element: <V5_modal_test />    
   }
 ]
 
