@@ -42,7 +42,7 @@ const countryOptions = [
   { value: 'canada', label: 'Canada' }
 ]
 
-const V5_modal_test = () => {
+const V05_modal_test = () => {
   // ** States
   const [show, setShow] = useState(false)
 
@@ -143,11 +143,11 @@ const V5_modal_test = () => {
             </Col>
 
 
-            <Col className='text-center' xs={12}>
-              <Button type='submit' className='me-1 mt-2' color='primary'>
+            <Col className='text-center mt-4' xs={12}>
+              <Button type='submit' className='me-4' color='primary' outline >
                 Submit
               </Button>
-              <Button type='reset' className='mt-2' color='secondary' outline onClick={onDiscard}>
+              <Button type='reset' className='' color='secondary' outline onClick={onDiscard}>
                 Discard
               </Button>
             </Col>
@@ -158,4 +158,4 @@ const V5_modal_test = () => {
   )
 }
 
-export default V5_modal_test
+export default V05_modal_test
